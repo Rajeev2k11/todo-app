@@ -8,7 +8,7 @@ const TodoList = () => {
     const {Todo} = useContext(TodoContext)
     return Todo.length ?(
 
-    <div>
+    <div className="List">
         <ul>
             {Todo.map(list=>{
                 return(
@@ -18,7 +18,7 @@ const TodoList = () => {
         </ul>
     </div> 
     ) : (
-        <div className="Empty">No any activity. Good day</div>
+        <div className="empty">No any activity. Good day</div>
     )
 }
 export default TodoList;

@@ -5,8 +5,8 @@ export const TodoContext = createContext();
 
 const TodoContextProvider = (props) =>{
     const [Todo, setTodo] = useState([
-        {List:"Walking", Time:"30 min", id: 1},
-        {List:"Workout", Time:"1 hour", id: 2},
+        {List:"Walking", Time:"07:00 ", id: 1},
+        {List:"Workout", Time:"08:00", id: 2},
     ]);
 
     const addTodo= (List, Time)=>{
@@ -19,7 +19,7 @@ const TodoContextProvider = (props) =>{
 
     return(
         <TodoContext.Provider value= {{Todo, addTodo, removeTodo}}>
-            {props.children};
+            {props.children}
         </TodoContext.Provider>
     )
 
